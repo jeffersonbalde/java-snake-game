@@ -35,7 +35,7 @@ public class GamePanel extends JPanel implements ActionListener {
     public void startGame(){
         newApple();
         running = true;
-        timer = new Timer(DELAY, this);
+        timer = new Timer(DELAY, this);               
         timer.start();
     }
 
@@ -57,7 +57,7 @@ public class GamePanel extends JPanel implements ActionListener {
         FontMetrics metrics2 = getFontMetrics(g.getFont());
         g.drawString("Game Over", (SCREEN_WIDTH - metrics2.stringWidth("Game Over"))/2, SCREEN_HEIGHT/2);
     }
-
+     
     public void draw(Graphics g){
         if(running){
             /*
@@ -168,7 +168,7 @@ public class GamePanel extends JPanel implements ActionListener {
         repaint();
     }
 
-    public class MyKeyAdapter extends KeyAdapter {
+    public class MyKeyAdapter extends KeyAdapter { 
         @Override
         public void keyPressed(KeyEvent e) {
             switch(e.getKeyCode()){
